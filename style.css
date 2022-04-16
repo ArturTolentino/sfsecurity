@@ -1,0 +1,221 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+
+
+
+
+/* =================================== */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: rgb(255, 255, 255);
+  
+}
+/* =========== Navigation ============== */
+
+.navigation_bar a {
+  font-size: 2rem;
+}
+
+.logo {
+  max-width: 12rem;
+  margin-right: 1rem;
+
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.navigation_bar {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(darkblue, rgb(6, 0, 31));
+  top: 80px;
+  left: -100%;
+  text-align: justify;
+  transition: all .5s;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 11rem;
+
+}
+
+ /* =========== MENU HAMBURGUE ============== */
+.menu_hamburgue {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .navigation_bar {
+  
+  left: 0;
+}
+
+
+.menu_hamburgue  {
+
+}
+
+.menu_hamburgue img {
+  display: flex;
+  width: 1.7rem;
+  filter: invert(100%) sepia(0%) saturate(1691%) hue-rotate(29deg) brightness(122%) contrast(98%);
+  
+}
+
+.header {
+  background-color: darkblue;
+  box-shadow: 1px 1px 4px rgb(18, 11, 59);
+  height: 6rem;
+  justify-content: space-between;
+  padding: 0 10%;
+  
+}
+
+.navigation_bar {
+  gap: 3rem;
+}
+
+.navigation_bar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+
+}
+
+.navigation_bar a:hover {
+  color: rgb(175, 175, 175);
+}
+
+/* ========= Imagem banner ========== */
+
+.img_banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(assets/casa.png);
+  width: 100%;
+  height: 350px;
+
+}
+
+/* ========= Conteudo ========== */
+section {
+  margin: 5.5rem 2rem ;
+}
+
+section h2 {
+
+ color: rgb(0, 0, 168);
+ border-bottom: 1px green solid;
+ padding-bottom: 0.6rem;
+ max-width: fit-content;
+}
+
+
+section p {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+section img {
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+button {
+  border: 1px solid black;
+  padding: 0.31rem 0.31rem;
+  margin-bottom: 1.2rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: darkblue;
+  color: white;
+  align-items: center;
+
+}
+
+
+
+/* ======== Media Query ========= */
+
+@media screen and (min-width: 800px) {
+
+
+
+  .img_banner {
+    
+    background-size: 100% 100%;
+    height: 410px;
+    background-position: center;
+    background-position-y: 10% ;
+  }
+  
+  .navigation_bar {
+    position: initial;
+    height:initial;
+    width:initial;
+    background-image:initial ;
+    flex-direction: row;
+    padding-top:initial ;
+  }
+
+  .navigation_bar a {
+    font-size:initial ;
+
+  }
+
+  .menu_hamburgue {
+    display: none;
+    
+  }
+
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    gap: 3rem;
+  }
+
+  section:nth-child(odd) {
+    flex-direction: row-reverse;
+
+  }
+
+  section p {
+    width: 65ch;
+  }
+  
+  section img {
+    width: 32.93rem;
+    box-shadow: 5px -5px 50px rgba(9, 4, 39, 0.418) ;
+    border-radius: 10px;
+  }
+
+  
+}
